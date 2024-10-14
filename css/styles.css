@@ -1,0 +1,129 @@
+/* Neon Dark Theme */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0a0a0a;
+    color: #cfd8dc;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    background-color: #111111;
+    color: #18ffff;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 255, 238, 0.3);
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+nav ul li {
+    margin: 0 15px;
+    position: relative;
+}
+nav ul li a {
+    color: #18ffff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 20px; /* Rounded corners */
+    transition: color 0.3s ease, background-color 0.3s ease, border 0.3s ease;
+}
+nav ul li a:hover {
+    color: #18ffff;
+    background-color: #333333; /* Dark gray background on hover */
+    border: 1px solid #444444; /* Border color for hover effect */
+}
+
+/* Rest of the CSS */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.hero {
+    background-color: #111111;
+    padding: 100px 20px;
+    text-align: center;
+    color: #18ffff;
+}
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #18ffff;
+
+}
+.hero p {
+    font-size: 20px;
+    color: #cfd8dc;
+}
+.section-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #18ffff;
+
+}
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+.portfolio-item {
+    width: calc(33.333% - 20px);
+    background-color: #222;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 255, 238, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 255, 238, 0.6);
+}
+.portfolio-item img {
+    max-width: 100%;
+    border-radius: 8px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+.portfolio-item img:hover {
+    filter: grayscale(0%);
+}
+.portfolio-item h3 {
+    color: #18ffff;
+    margin: 10px 0;
+}
+.contact {
+    background-color: #111111;
+    color: #cfd8dc;
+    padding: 50px 20px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 255, 238, 0.3);
+}
+.contact p {
+    font-size: 18px;
+}
+.contact a {
+    color: #18ffff;
+    text-decoration: underline;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    color: #cfd8dc;
+    box-shadow: 0 0 10px rgba(0, 255, 238, 0.3);
+}
+
+@media (max-width: 768px) {
+    .portfolio-item {
+        width: 100%;
+    }
+}
