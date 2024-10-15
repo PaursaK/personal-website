@@ -82,13 +82,9 @@ h2 {
 .project-box:hover {
     transform: translateY(-5px); /* Lift effect */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow effect */
-    background-color: #E2E8F0; /* Light gray background on hover */
+    background-color: #6B46C1; /* Light gray background on hover */
 }
 
-/* Optional: Add a darker color to the text when hovering */
-.project-box:hover h3 {
-    color: #1E3A8A; /* Darker text color */
-}
 
 footer {
     background-color: #F3F4F6; /* Light gray for footer */
