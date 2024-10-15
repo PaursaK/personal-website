@@ -1,129 +1,119 @@
-/* Neon Dark Theme */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #0a0a0a;
-    color: #cfd8dc;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    background-color: #F9FAFB; /* Light background */
+    color: #4B5563; /* Dark text */
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+.profile-pic {
+    width: 250px; /* Set the width */
+    height: 250px; /* Set the height to be larger for a vertical oval */
+    border-radius: 30% / 30%; /* Make the image oval by adjusting the vertical and horizontal radii */
+    border: 2px solid #6B46C1; /* Add a border with the theme color */
+    object-fit: cover; /* Ensure the image covers the container */
+    margin-bottom: 20px; /* Add space below the image */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Add a subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add hover effects */
+}
+
+.profile-pic:hover {
+    transform: scale(1.05); /* Slightly increase size on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+
+nav {
+    position: fixed; /* Keeps the navbar in place */
+    top: 0; /* Sticks it to the top */
+    width: 100%; /* Makes it full width */
+    background-color: rgba(255, 255, 255, 0.9); /* White with some transparency */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    z-index: 1000; /* Ensure it's above other content */
+    transition: background-color 0.3s ease; /* Smooth transition when scrolling */
+}
+
+nav a {
+    transition: color 0.3s, transform 0.3s; /* Smooth hover transition */
+}
+
+nav a:hover {
+    color: #6B46C1; /* Purple color on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
 }
 header {
-    background-color: #111111;
-    color: #18ffff;
-    padding: 15px 20px;
+   
+    color: #1F2937; /* Darker text for contrast */
+    padding: 60px 20px; /* Added padding */
     text-align: center;
-    box-shadow: 0 0 15px rgba(0, 255, 238, 0.3);
 }
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-nav ul li {
-    margin: 0 15px;
-    position: relative;
-}
-nav ul li a {
-    color: #18ffff;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 10px 20px;
-    border-radius: 20px; /* Rounded corners */
-    transition: color 0.3s ease, background-color 0.3s ease, border 0.3s ease;
-}
-nav ul li a:hover {
-    color: #18ffff;
-    background-color: #333333; /* Dark gray background on hover */
-    border: 1px solid #444444; /* Border color for hover effect */
+section {
+    padding: 60px 20px; /* Consistent padding */
 }
 
-/* Rest of the CSS */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+h2 {
+    border-bottom: 2px solid #6B46C1; /* Underline for section headers */
+    padding-bottom: 10px;
+    margin-bottom: 30px; /* Space below header */
 }
-.hero {
-    background-color: #111111;
-    padding: 100px 20px;
-    text-align: center;
-    color: #18ffff;
+.project-box {
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for project boxes */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Rounded corners effect */
 }
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-    color: #18ffff;
+.project-box:hover {
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Enhanced shadow effect */
+}
+.project-box img {
+    width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+}
 
-}
-.hero p {
-    font-size: 20px;
-    color: #cfd8dc;
-}
-.section-title {
-    font-size: 32px;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #18ffff;
 
+.project-box {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transition for project boxes */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Rounded corners effect */
 }
-.portfolio {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-around;
+
+.project-box:hover {
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow effect */
+    background-color: #E2E8F0; /* Light gray background on hover */
 }
-.portfolio-item {
-    width: calc(33.333% - 20px);
-    background-color: #222;
-    padding: 15px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 255, 238, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+/* Optional: Add a darker color to the text when hovering */
+.project-box:hover h3 {
+    color: #1E3A8A; /* Darker text color */
 }
-.portfolio-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 20px rgba(0, 255, 238, 0.6);
-}
-.portfolio-item img {
-    max-width: 100%;
-    border-radius: 8px;
-    filter: grayscale(100%);
-    transition: filter 0.3s ease;
-}
-.portfolio-item img:hover {
-    filter: grayscale(0%);
-}
-.portfolio-item h3 {
-    color: #18ffff;
-    margin: 10px 0;
-}
-.contact {
-    background-color: #111111;
-    color: #cfd8dc;
-    padding: 50px 20px;
-    text-align: center;
-    box-shadow: 0 0 15px rgba(0, 255, 238, 0.3);
-}
-.contact p {
-    font-size: 18px;
-}
-.contact a {
-    color: #18ffff;
-    text-decoration: underline;
-}
+
 footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #111;
-    color: #cfd8dc;
-    box-shadow: 0 0 10px rgba(0, 255, 238, 0.3);
+    background-color: #F3F4F6; /* Light gray for footer */
+    padding: 20px 0; /* Padding for footer */
 }
-
+footer p {
+    margin: 0; /* Remove default margin */
+}
+/* Responsive Design */
 @media (max-width: 768px) {
-    .portfolio-item {
-        width: 100%;
+    nav {
+        flex-direction: column; /* Stack nav items on small screens */
+        align-items: center; /* Center align */
+    }
+    nav a {
+        padding: 10px; /* Adjust padding */
+    }
+    header h1 {
+        font-size: 2.5rem; /* Smaller heading on mobile */
+    }
+    .profile-pic {
+        width: 120px; /* Smaller size on mobile */
+        height: 120px;
     }
 }
+
+
+

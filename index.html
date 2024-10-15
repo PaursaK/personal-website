@@ -3,62 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Paursa Kamalian - Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel = "stylesheet">
+    <title>Paursa Kamalian's Portfolio</title>
 </head>
-<body>
+<body class="bg-gray-100 text-gray-800">
 
-<header>
-    <h1>Paursa Kamalian</h1>
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <!-- Navigation -->
+    <nav class="flex justify-between p-6 bg-white shadow-md">
+        <div class="text-lg font-bold">Paursa Kamalian</div>
+        <div>
+            <a href="#about" class="p-2 text-gray-800 hover:text-gray-600 hover:underline transition duration-300">About</a>
+            <a href="#projects" class="p-2 text-gray-800 hover:text-gray-600 hover:underline transition duration-300">Projects</a>
+            <a href="#experience" class="p-2 text-gray-800 hover:text-gray-600 hover:underline transition duration-300">Experience</a>
+            <a href="#contact" class="p-2 text-gray-800 hover:text-gray-600 hover:underline transition duration-300">Contact</a>
+        </div>
     </nav>
-</header>
 
-<div class="hero">
-    <h1>Hello, I'm Paursa Kamalian</h1>
-    <p>I'm passionate about [Your Passion].</p>
-</div>
+    <!-- Home Section -->
+    <header class="flex flex-col items-center justify-center h-screen text-center">
+        <img src="assets/avatar.png" alt="Paursa Kamalian's Profile Picture" class="profile-pic">
+        <h1 class="text-4xl font-extrabold">Hi, I'm Paursa Kamalian</h1>
+        <p class="mt-4 text-lg">A graduate student in Computer and Information Technology with a passion for data science and life science research.</p>
+        <a href="#projects" class="mt-6 px-4 py-2 bg-purple-500 text-white rounded hover:bg-purple-600">View My Work</a>
+    </header>
 
-<div id="about" class="container">
-    <h2 class="section-title">About Me</h2>
-    <p>Brief description about yourself, your background, skills, and what you’re passionate about.</p>
-</div>
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6 bg-white">
+        <h2 class="text-3xl font-bold text-center">About Me</h2>
+        <p class="mt-4 text-center">I am a dedicated graduate student pursuing a Master's in Computer and Information Technology at the University of Pennsylvania, where I combine my background in biology with a passion for data science and programming. Beyond academics, I enjoy exploring my interests in soccer, photography, and options trading, which help me maintain a balanced lifestyle. I’m also passionate about music and love working on personal projects that allow me to express my creativity and enhance my technical skills.
 
-<div id="portfolio" class="container">
-    <h2 class="section-title">Portfolio</h2>
-    <div class="portfolio">
-        <div class="portfolio-item">
-            <img src="project1.jpg" alt="Project 1">
-            <h3>Project 1</h3>
-            <p>Brief description of the project.</p>
+        </p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-6 bg-gray-200">
+        <h2 class="text-3xl font-bold text-center">Projects</h2>
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="project-box bg-white p-4 rounded shadow-md">
+                <h3 class="font-bold">FUTIGAMI</h3>
+                <p>Leveraged data science packages to extract and organize historical soccer data.</p>
+                <a href="https://github.com/PaursaK/Futigami" target="_blank" class="text-blue-500">View on GitHub</a>
+            </div>
+            <div class="project-box bg-white p-4 rounded shadow-md">
+                <h3 class="font-bold">Spotify Organizer</h3>
+                <p>Developed a Python application utilizing the Spotify API to create curated playlists.</p>
+                <a href="https://github.com/PaursaK/SpotifyOrganizer" target="_blank" class="text-blue-500">View on GitHub</a>
+            </div>
+            <div class="project-box bg-white p-4 rounded shadow-md">
+                <h3 class="font-bold">BattleshipGUI</h3>
+                <p>Collaborated to develop a fully functional GUI game based on the classic game ‘Battleship’.</p>
+                <a href="https://github.com/PaursaK/BattleshipGUI" target="_blank" class="text-blue-500">View on GitHub</a>
+            </div>
         </div>
-        <div class="portfolio-item">
-            <img src="project2.jpg" alt="Project 2">
-            <h3>Project 2</h3>
-            <p>Brief description of the project.</p>
-        </div>
-        <div class="portfolio-item">
-            <img src="project3.jpg" alt="Project 3">
-            <h3>Project 3</h3>
-            <p>Brief description of the project.</p>
-        </div>
-    </div>
-</div>
+    </section>
 
-<div id="contact" class="contact">
-    <h2 class="section-title">Contact Me</h2>
-    <p>Email me at <a href="mailto:pkamalian98@gmail.com">pkamalian98@gmail.com</a></p>
-</div>
 
-<footer>
-    <p>&copy; 2024 Paursa Kamalian. All rights reserved.</p>
-</footer>
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 px-6 bg-white">
+        <h2 class="text-3xl font-bold text-center">Experience</h2>
+        <p class="mt-4 text-center">
+            As a <strong>Sr. Research Associate</strong> at Monod Bio, I leverage my expertise in <strong>Python</strong> to develop automation scripts for data acquisition and analysis in life sciences. I actively utilize advanced machine learning tools such as <strong>AlphaFold</strong>, <strong>MPNN</strong>, and <strong>RFDiffusion</strong> to design proteins from scratch, optimizing their functional properties for various applications. While my strongest programming language is <strong>Python</strong>, I am also proficient in <strong>Java</strong> and actively expanding my skill set by learning <strong>SQL</strong>, <strong>R</strong>, <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>. This diverse technical background enables me to effectively contribute to interdisciplinary teams and drive innovative solutions in life sciences.
+        </p>
+        
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 bg-gray-200">
+        <h2 class="text-3xl font-bold text-center">Contact Me</h2>
+        <p class="mt-4 text-center">Feel free to reach out via email at <a href="mailto:pkamalian98@gmail.com" class="text-blue-500">pkamalian98@gmail.com</a>.</p>
+        <div class="flex justify-center mt-4">
+            <a href="https://github.com/PaursaK" target="_blank" class="mx-4 transition-transform transform hover:scale-125 hover:text-black">
+                <i class="fab fa-github fa-2x text-gray-800 hover:text-gray-900"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/paursa-kamalian" target="_blank" class="mx-4 transition-transform transform hover:scale-125 hover:text-black">
+                <i class="fab fa-linkedin fa-2x text-gray-800 hover:text-gray-900"></i>
+            </a>
+        </div>
+    </section>
+
+    <footer class="py-6 text-center bg-white">
+        <p>&copy; 2024 Paursa Kamalian</p>
+    </footer>
 
 </body>
 </html>
